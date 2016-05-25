@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="http://indice-ejemplos.appspot.com/miestilo.css">
 	</head>
 	<body>
+		<a href="CalculadoraServlet">Cerrar Sesion</a>
 		<form name="calculadora" method="get" action="/calculadora">
 			<fieldset><legend>Calculadora</legend>
 				<div id="calculadora">
