@@ -5,12 +5,21 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>Gato</servlet-name>
-		<servlet-class>web.GatoServlet</servlet-class>
+		<servlet-name>Iniciar</servlet-name>
+		<servlet-class>web.Iniciar</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Gato</servlet-name>
-		<url-pattern>/gato</url-pattern>
+		<servlet-name>Iniciar</servlet-name>
+		<url-pattern>/Iniciar</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Cerrar</servlet-name>
+		<servlet-class>web.Cerrar</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cerrarr</servlet-name>
+		<url-pattern>/Cerrar</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

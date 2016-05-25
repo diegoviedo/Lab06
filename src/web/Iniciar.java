@@ -11,8 +11,8 @@ public class Iniciar extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
-		
 		resp.setContentType("text/plain");
+		
 		
 		HttpSession misesion= req.getSession(true);
 		misesion.setAttribute("nombre","pepe");
