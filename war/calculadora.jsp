@@ -38,6 +38,9 @@
 				</div>
 			</fieldset>
 		</form>
+		<form action="Cerrar">
+			<input type="submit" value="CerrarSesion"/>
+		</form>
 		</p>
 	</body>
 </html>

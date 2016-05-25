@@ -14,5 +14,7 @@ public class Cerrar extends HttpServlet {
 		
 		
 		misesion.invalidate(); //Cierra la sesion
+		resp.sendRedirect("calculadora.jsp");
+		
 	}
 }
