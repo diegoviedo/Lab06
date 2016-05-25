@@ -7,8 +7,13 @@ import javax.servlet.http.*;
 public class CalculadoraServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setContentType("text/plain");
+		resp.setContentType("text/HTML");
+		if(req.getSession(true).getAttribute("nombre")!=null){
+			resp.sendRedirect("SinSesion.jsp");
+		}else{
 		resp.getWriter().println(operar(req.getParameter("oper1"),req.getParameter("oper2"),req.getParameter("opera")));
+		resp.getWriter().println("<br><a href='calculadora.jsp'>USA LA CALCULADORA</a>");
+		}
 	}
 	
 	public String operar(String a, String b, String op){

@@ -11,7 +11,7 @@ public class Iniciar extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
-		resp.setContentType("text/html");
+		resp.setContentType("text/HTML");
 		String nombre=req.getParameter("cuenta");
 		String clave=req.getParameter("clave");
 		
@@ -26,14 +26,14 @@ public class Iniciar extends HttpServlet {
 			//misesion.setAttribute("inicio", date.toString());
 			
 			resp.getWriter().println("Se ha iniciado una sesion con los siguientes datos:");
-			resp.getWriter().println("ID : " + misesion.getId());
-			resp.getWriter().println("CreationTime : " + misesion.getCreationTime());
-			resp.getWriter().println("MaxInactiveInterval : " + misesion.getMaxInactiveInterval());
+			resp.getWriter().println("<BR>ID : " + misesion.getId());
+			resp.getWriter().println("<BR>CreationTime : " + misesion.getCreationTime());
+			//resp.getWriter().println("MaxInactiveInterval : " + misesion.getMaxInactiveInterval());
 			//resp.getWriter().println("-------------------------------------------------------------");
-			resp.getWriter().println("Nombre : " + misesion.getAttribute("nombre"));
-			resp.getWriter().println("Email : " + misesion.getAttribute("email"));
-			resp.getWriter().println("Inicio : " + misesion.getAttribute("inicio"));
-			resp.getWriter().println("<a href='calculadora.jsp'>USA LA CALCULADORA</a>");
+			resp.getWriter().println("<BR>Nombre : " + misesion.getAttribute("nombre"));
+			resp.getWriter().println("<BR>Contraseña : " + misesion.getAttribute("contraseña"));
+			//resp.getWriter().println("<BR>Inicio : " + misesion.getAttribute("inicio"));
+			resp.getWriter().println("<BR><a href='calculadora.jsp'>USA LA CALCULADORA</a>");
 		}else{
 			resp.sendRedirect("NoIngreso.jsp");
 			
