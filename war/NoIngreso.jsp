@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>NO INGRESO</title>
 </head>
 <body>
-
+<h2>No se logro ingresar </h2>
+<h3><a href="index.html">Volver a intentar</a></h3>
 </body>
 </html>
