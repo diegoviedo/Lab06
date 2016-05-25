@@ -21,7 +21,7 @@ public class Iniciar extends HttpServlet {
 			HttpSession misesion= req.getSession(true);
 			misesion.setAttribute("nombre","pepe");
 			misesion.setAttribute("contraseña","pepe");
-			//misesion.setMaxInactiveInterval(10);// 10 segundos
+			misesion.setMaxInactiveInterval(60);// 10 segundos
 			//Date date = new Date();
 			//misesion.setAttribute("inicio", date.toString());
 			
@@ -29,12 +29,13 @@ public class Iniciar extends HttpServlet {
 			resp.getWriter().println("ID : " + misesion.getId());
 			resp.getWriter().println("CreationTime : " + misesion.getCreationTime());
 			resp.getWriter().println("MaxInactiveInterval : " + misesion.getMaxInactiveInterval());
-			resp.getWriter().println("-------------------------------------------------------------");
+			//resp.getWriter().println("-------------------------------------------------------------");
 			resp.getWriter().println("Nombre : " + misesion.getAttribute("nombre"));
 			resp.getWriter().println("Email : " + misesion.getAttribute("email"));
 			resp.getWriter().println("Inicio : " + misesion.getAttribute("inicio"));
+			resp.getWriter().println("<a href='calculadora.jsp'>USA LA CALCULADORA</a>");
 		}else{
-			req.getRequestDispatcher("../NoIngreso.jsp");
+			resp.sendRedirect("NoIngreso.jsp");
 			
 			
 		}
