@@ -38,9 +38,6 @@
 				</div>
 			</fieldset>
 		</form>
-		<br />
-		<p>Hecho por: Richart Escobedo <br />
-		<a href="Calculadora.zip">Descargar código fuente</a>
 		</p>
 	</body>
 </html>
