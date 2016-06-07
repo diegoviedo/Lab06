@@ -31,7 +31,7 @@ public class ActionServlet extends HttpServlet {
 			
 			Pedido pedidoX = new Pedido(usuario,pedido);
 			pedidos.add(pedidoX);
-		}
+		
 		
 		out.println("<ul>");
 		for(int i=0; i<pedidos.size(); i++){
@@ -41,6 +41,12 @@ public class ActionServlet extends HttpServlet {
 			
 		}
 		out.println("</ul>");
+		
+		}else {
+			out.println("<ul>");
+			out.println("</ul>");
+		}
+		
 	}
 
 }

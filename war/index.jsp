@@ -11,11 +11,11 @@
 <script>
 	$(document).ready(function() {
 		$('#submit').click(function(event) {
-			var nombreVar = $('#usuario').val();
-			var apellidoVar = $('#pedido').val();
+			var usuarioVar = $('#usuario').val();
+			var pedidoVar = $('#pedido').val();
 			$.post('actionServlet', {
-				nombre : nombreVar,
-				apellido: apellidoVar,
+				usuario : usuarioVar,
+				pedido: pedidoVar,
 			}, function(responseText) {
 				$('#pedidos').html(responseText);
 			});
@@ -34,7 +34,7 @@
 		
 		<input type="button" id="submit" value="Añadir" /> 
 	</form>
-	<br>
+
 	
 </body>
 </html>
